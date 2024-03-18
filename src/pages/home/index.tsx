@@ -36,17 +36,17 @@ export async function getStaticProps() {
 export default function Home({ data, genres, studios }: IProps) {
   const [selectedStudio, setSelectedStudio] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
-  const [audienceScore, setAudienceScore] = useState<number | string>('');
+  const [audienceScore, setAudienceScore] = useState<number>(0);
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleAudienceScoreChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setAudienceScore(event.target.value);
+    setAudienceScore(Number(event.target.value));
   };
 
   const filteredMovies = data.filter(movie => {
     const studioCondition = selectedStudio ? movie.studio.id_studio === selectedStudio : true;
     const genreCondition = selectedGenre ? movie.genre.id_genre === selectedGenre : true;
-    const audienceScoreCondition = audienceScore ? parseFloat(movie.audience_score) >= parseFloat(audienceScore) : true;
+    const audienceScoreCondition = audienceScore ? parseFloat(movie.audience_score) >= audienceScore : true;
     const searchCondition = searchTerm ? movie.title.toLowerCase().includes(searchTerm.toLowerCase()) : true;
 
     return studioCondition && genreCondition && audienceScoreCondition && searchCondition;
