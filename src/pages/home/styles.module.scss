@@ -1,0 +1,69 @@
+/* pages/styles.module.scss */
+
+.moviesPage {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+
+  .pageTitle {
+    color: #ff5722;
+    margin-bottom: 20px;
+  }
+
+  /* styles.module.scss */
+
+  .filterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .sliderContainer {
+    width: 300px;
+    margin-right: 20px;
+  }
+
+  .slider {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+
+  .sliderValue {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+
+  .moviesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+
+}

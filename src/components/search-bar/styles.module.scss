@@ -1,0 +1,13 @@
+/* components/SearchBar.module.scss */
+
+.searchBar {
+  text-align: center;
+  margin-bottom: 20px;
+
+  input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+}
