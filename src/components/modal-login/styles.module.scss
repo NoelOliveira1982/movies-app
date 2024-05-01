@@ -1,0 +1,60 @@
+/* components/LoginModal.module.scss */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modalContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.loginButton,
+.closeButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.loginButton:hover {
+  background-color: #0056b3;
+}
+
+.closeButton {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.closeButton:hover {
+  background-color: #545b62;
+}

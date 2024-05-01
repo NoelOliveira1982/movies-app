@@ -1,0 +1,65 @@
+/* styles.module.scss */
+
+.allMoviesPage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.filterContainer {
+  margin-bottom: 20px;
+}
+
+.filterGroup {
+  margin-bottom: 10px;
+}
+
+.filterGroup label {
+  margin-right: 10px;
+}
+
+.sliderContainer {
+  margin-bottom: 10px;
+}
+
+.slider {
+  width: 100%;
+}
+
+.sliderValue {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.searchContainer {
+  margin-bottom: 20px;
+}
+
+.searchContainer input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.moviesList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.movieItem {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.movieItem h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.movieItem p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
